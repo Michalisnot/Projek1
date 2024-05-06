@@ -1,5 +1,6 @@
 from math import sin, cos, sqrt, atan, atan2, degrees, radians
 from pprint import pprint
+import numpy as np
 o = object()
 import sys
 class Transformacje:
@@ -85,6 +86,25 @@ class Transformacje:
         y = (Rn + h)*cos(phi)*sin(lam)
         z = (Rn + h)*sin(phi) - q
         return x,y,z
+    #zajęcia 6.05
+
+    def xyz2neu(self,x,y,z,x_0,y_0,z_0):
+        
+        phi, lam, _ = [radians(coord) for coord in self.xyz2plh(x,y,z)]
+        
+        R = np.array([[-sin(lam), -sin(phi)*cos(lam), cos(phi)*cos(lam)],
+                      [ cos(lam), -sin(phi)*sin(lam), cos(phi)*sin(lam)],
+                      [         0,          cos(phi),          sin(phi)]])
+        
+        xyz_t = np.array([[x-x_0],
+                          [y-y_0],
+                          [z-z_0]])
+        
+        enu = R.T @ xyz_t
+        
+        return [float(enu[1]),float(enu[0]),float(enu[2])]
+        
+        
 
 if __name__ == "__main__":
     # utworzenie obiektu
@@ -193,6 +213,25 @@ with open('Result_plh2xyz.txt', 'w') as f:
     coords_xyz_line2= '\n'.join([str(coords)for coords in coords_xyz])
     
     f.writelines(coords_xyz_line2)
+    
+    
+    
+    
+    
+#zajęcia 6.05
+
+    # def xyz2neu(self,)
+    
+x,y,z = 1,1,1
+x_0,y_0,z_0 = 1,1,3
+XD = geo.xyz2neu(x,y,z,x_0,y_0,z_0)    
+    
+    
+    
+    
+    
+    
+    
     
     
     
