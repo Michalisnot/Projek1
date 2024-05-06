@@ -160,9 +160,20 @@ if __name__ == "__main__":
             coords_xyz_line2= '\n'.join([str(coords)for coords in coords_xyz])
             
             f.writelines(coords_xyz_line2)
-            
-            
-            
+    if '--xyz2neu' in sys.argv:
+        coords_plh=[]
+        with open('wsp_inp.txt') as f:
+            lines = f.readlines()
+            lines = lines[4:]
+            for line in lines:
+                line = line.strip('\n')
+                x_str,y_str,z_str= line.split(',')
+                x,y,z = (float(x_str),float(y_str),float(z_str))
+                n,e,u=geo.xyz2neu(x,y,z,x_0,y_0,z_0)
+                coords_plh.append([n,e,u])
+        print(coords_plh)     
+         
+         
     # dane XYZ geocentryczne
     X = 3664940.500; Y = 1409153.590; Z = 5009571.170
     phi, lam, h = geo.xyz2plh(X, Y, Z)
@@ -227,7 +238,7 @@ x_0,y_0,z_0 = 1,1,3
 XD = geo.xyz2neu(x,y,z,x_0,y_0,z_0)    
     
     
-    
+
     
     
     
