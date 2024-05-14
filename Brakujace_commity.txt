@@ -1,0 +1,19 @@
+Lista zmian:
+Usunięcie  funkcji odpowiadających za transformacje napisanych na zajęciach
+Dodanie funkcji odpowiadających za transformacje z źródeł z III sem.
+NEU nie działa
+NEU jednak działa
+Dodanie flag -f i -r w celu dodania morzliwości wpisywania danych lub dostarczenia pliku do odczytu
+Dodanie zmiennej file_name i zastąpienie nazw plików zmienną file_name
+Dodanie wyjątku przy niepodaniu flagi odczytywania
+Usunięcie wyjątku dla flag -f - -r
+Dodanie flag --bl2xy1992 i --bl2xy2000
+Dodanie flagi -strefa do --bl2xy2000
+Usunięcie flagi -strefa i dodanie sprawdzenia strefy przez wartość l dla flagi --bl2xy2000
+Dodanie wyjątku (NameError('Błędna lambda')) dla --bl2xy2000 w przypadku wykroczenia poza zakres układu 2000
+Zmodyfikowanie funkcji tworzącej plik z wynikami we wszystkich flagach na "mniej informatyczną"
+Naprawa niewłaściwej długości nagłówka przy odczycie dla flagi --plh2xyz
+Dodanie wyjątku NameError('Podano wartosci w sysytemie innym niz dziesietny') dla flagi -r w przypadku wczytania wartości innych niż float
+Dodanie wyjątku NameError('Podano nieznaną flagę')
+Dodanie wyjątku przy niepodaniu flagi odczytywania
+Naprawienie Git_Bash za pomocą Git_GUI
