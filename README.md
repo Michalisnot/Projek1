@@ -1,11 +1,11 @@
 # Projekt Informatyka nr.1
 
-Program został napisany aby implementował następujące transformacje (bez analizy dokładnościowej):\n
-    - XYZ (geocentryczne) -> BLH (elipsoidalne phi, lambda, h)\n
-    - BLH -> XYZ \n
-    - XYZ -> NEUp \n
-    - BL(GRS80, WGS84 -> 2000 \n
-    - BL(GRS80, WGS84 -> 1992 \n
+Program został napisany aby implementował następujące transformacje (bez analizy dokładnościowej):      
+    - XYZ (geocentryczne) -> BLH (elipsoidalne phi, lambda, h)     
+    - BLH -> XYZ        
+    - XYZ -> NEUp      
+    - BL(GRS80, WGS84 -> 2000        
+    - BL(GRS80, WGS84 -> 1992    
 Ponadto program umożliwia podawanie argumentów przy wywołaniu za pomocą zmiennej sys.argv,
 potrafi transformować wiele współrzędnych zapisanych w pliku tekstowym przekazywanym do programu jako argument 
 i tworzyć plik wynikowy, obsługuje przypadki gdy użytkownik wprowadzi niepoprawne wartości.
