@@ -225,6 +225,7 @@ if __name__ == "__main__":
     O = np.shape(sys.argv)
     o = O[0]
     # print(o)
+    Model = 'grs80'
     if '-grs80' in sys.argv:
         Model = 'grs80'
     if '-wgs84' in sys.argv:
