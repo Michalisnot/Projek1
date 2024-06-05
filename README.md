@@ -58,7 +58,23 @@ dla flagi --bl2xy2000:
 F:\[...]>python skrypty.py --bl2xy2000 -grs80 -r 52.097272219326584 21.03153333279777   
 Wyniki transformacji otrzymamy wówczas w pliku: Results_bl2xy2000:       
 x[m],        y[m]    
-5773722.720951517,70502160.78324433        
+5773722.720951517,70502160.78324433  
+Dla flagi -f i -wgs84:
+F:[...]>python skrypty.py --xyz2plh -wgs84 -f wsp_xd.txt:
+Zawartość test_file.txt
+[Nagłowek
+
+
+]
+3664940.5,1409153.59,5009571.17
+3664940.5,1409153.59,5009571.17    
+3664940.5,1409153.59,5009571.17   
+Wyniki transformacji otrzymamy wówczas w pliku: Results_xyz2plh:   
+phi[deg],        lambda[deg],          H[m]
+52.09727221841258,21.03153333279777,141.39859721064568
+52.09727221841258,21.03153333279777,141.39859721064568
+52.09727221841258,21.03153333279777,141.39859721064568
+  
 ## Wymagania systemowe       
 
 Do tego aby swobodnie korzystać z naszego projektu należy posiadać: system operacyjny windows 10, Python w wersji 3.11.8, a w samym oprogramowaniu trzeba mieć  
