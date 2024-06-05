@@ -73,10 +73,10 @@ x[m],        y[m]
 Dla flagi -f i -wgs84:  
 F:[...]>python skrypty.py --xyz2plh -wgs84 -f wsp_xd.txt:  
 Zawartość test_file.txt  
-[Nagłowek  
-  
-  
-]  
+[Nagłowek    
+Nagłowek   
+Nagłowek    
+Nagłowek]    
 3664940.5,1409153.59,5009571.17  
 3664940.5,1409153.59,5009571.17      
 3664940.5,1409153.59,5009571.17     
