@@ -219,12 +219,17 @@ class Transformacje:
         return(x_00,y_00)
 if __name__ == "__main__":
     # utworzenie obiektu
-    geo = Transformacje(model = "grs80")
+
     input_file_path = sys.argv[-1]
     # print(sys.argv)
     O = np.shape(sys.argv)
     o = O[0]
     # print(o)
+    if '-grs80' in sys.argv:
+        Model = 'grs80'
+    if '-wgs84' in sys.argv:
+        Model = 'wgs84'
+    geo = Transformacje(model=Model)
     if '-f' in sys.argv:
         i=0
         for j in sys.argv:
