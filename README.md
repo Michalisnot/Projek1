@@ -121,6 +121,6 @@ Do tego aby swobodnie korzystać z naszego projektu należy posiadać: system op
 Program nie obsługuje wyjątku w przypadku nadmiernej ilości danych w trybie -r     
 Program obsługuje pliki tylko z 4-wierszowym nagłówkiem     
 Program nie wymaga flagi elipsoidy(domyślnie grs80)    
-Program wymaga podania x0,y0,z0 w przypadku każdej trójki współrzędnych w przypadku przesłania danych za pomocą pliku do flagi --xyz2neu      
+    
 
 
