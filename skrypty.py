@@ -334,9 +334,12 @@ if __name__ == "__main__":
         with open(f'{file_name}') as f:
             lines = f.readlines()
             lines = lines[4:]
+            i=1
             for line in lines:
                 line = line.strip('\n')
                 xd = line.split(',')
+                if i == 1 and len(xd)!=6:
+                    raise NameError('Nie podano wspolrzędnych srodka')
                 if len(xd)==6:
                     x_str,y_str,z_str,x0,y0,z0= line.split(',')
                 if len(xd)==3:
@@ -344,6 +347,7 @@ if __name__ == "__main__":
                 x,y,z,x0,y0,z0 = (float(x_str),float(y_str),float(z_str),float(x0),float(y0),float(z0))
                 n,e,u=geo.xyz2neu(x,y,z,x0,y0,z0)
                 coords_neu.append([n,e,u])
+                i=2
         with open('Result_xyz2neu.txt', 'w') as f:
             
             f.write('n[m],        e[m],          u[m]\n')
