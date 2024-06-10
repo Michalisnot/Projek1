@@ -245,7 +245,7 @@ if __name__ == "__main__":
             if j == '-r':
                 break
             i+=1
-            print(i)
+            # print(i)
         with open('wsp_xd.txt', 'w') as f:
             
             f.write('\n')
@@ -336,8 +336,11 @@ if __name__ == "__main__":
             lines = lines[4:]
             for line in lines:
                 line = line.strip('\n')
-                
-                x_str,y_str,z_str,x0,y0,z0= line.split(',')
+                xd = line.split(',')
+                if len(xd)==6:
+                    x_str,y_str,z_str,x0,y0,z0= line.split(',')
+                if len(xd)==3:
+                    x_str,y_str,z_str = line.split(',')
                 x,y,z,x0,y0,z0 = (float(x_str),float(y_str),float(z_str),float(x0),float(y0),float(z0))
                 n,e,u=geo.xyz2neu(x,y,z,x0,y0,z0)
                 coords_neu.append([n,e,u])
