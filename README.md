@@ -26,35 +26,35 @@ Uwaga! Wszystkie wyniki są zwtracane poprzez stworzenie pliku wynikowego, nie m
 Oznaczenia:   
 --xyz2plh (zamienia xyz na flh),    
 dla flagi -r należy podać współrzędne w kolejności x,y,z,   
-dla flagi -f należy podać plik z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu wartości jak dla flagi -r  
+dla flagi -f należy podać nazwę pliku textowego z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu wartości jak dla flagi -r  
 wynikiem jest plik textowy Result_xyz2plh.txt z jednowierszowym nagłówkiem, kolejności phi, lambda, w stopniach      
  jako liczba dziesiętna i h w metrach    
 współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'    
    
 --plh2xyz (zamiena flh na xyz),   
 dla flagi -r należy podać współrzędne w kolejności f,l,w stopniach jako liczba dziesiętna a h w metrach   
-dla flagi -f należy podać plik z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r  
+dla flagi -f należy podać nazwę pliku textowego z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r  
 wynikiem jest plik textowy Result_plh2xyz.txt z jednowierszowym nagłówkiem, kolejności x, y, z w metrach    
 współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'    
     
 --xyz2neu (zamieniia xyz na NEU),    
 dla flagi -r należy podać współrzędne w kolejności x,y,z,x0,y0,z0   
-dla flagi -f należy podać plik z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r   
+dla flagi -f należy podać nazwę pliku textowego z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r   
 przy czym, nie licząc pierszego wiersza po nagłówku można podać samo x,y,z, wtedy wartości NEU zostaną policzone   
 dla ostatnio podano x0,y0,z0    
-wynikiem jest plik textowy Result_xyz2neu.txt z jednowierszowym nagłówkiem, kolejności x, y, z w metrach  	   
+wynikiem jest plik textowy Result_xyz2neu.txt z jednowierszowym nagłówkiem, kolejności N,E,U w metrach  	   
 współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'   
     
 --bl2xy1992 (zamiania bl na Ukł. 1992),   
 dla flagi -r należy podać współrzędne w kolejności B, L, w stopniach jako liczba dziesiętna  
-dla flagi -f należy podać plik z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r  
+dla flagi -f należy podać nazwę pliku textowego z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r  
 wynikiem jest plik textowy Result_bl2xy1992.txt z jednowierszowym nagłówkiem, kolejności x,y w metrach w układzie 1992  
 współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'   
    
   
 --bl2xy2000 (zamiania bl na Ukł. 2000),  
 dla flagi -r należy podać współrzędne w kolejności B, L, w stopniach jako liczba dziesiętna  
-dla flagi -f należy podać plik z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r  
+dla flagi -f należy podać nazwę pliku textowego z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r  
 wynikiem jest plik textowy Result_bl2xy2000.txt z jednowierszowym nagłówkiem, kolejności x,y w metrach w układzie 2000  
 współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'   
      
@@ -62,7 +62,9 @@ współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'
 Do obsługi pliku TRZEBA podać po fladze transformacji: -f (należy wówczas podać nazwę pliku) lub -r (trzeba wpisać dane dla 1 transformacji)       
 	-r (ręczne wpisywanie danych)    
 	-f (dane z pliku)    
-   
+ Inaczej zostanie podniesiony wyjątek.
+ W przypadku -f program i plik powinny znadować się w tym samym folderze 
+
 Przykład:   
 dla flagi --xyz2plh:     
 F:\[...]>python skrypty.py --xyz2plh -grs80 -r 3664940.5 1409153.59 5009571.17    
