@@ -21,19 +21,43 @@ i tworzyć plik wynikowy, obsługuje przypadki gdy użytkownik wprowadzi niepopr
 
 ## Jak używać    
 
-(Instrukcja dotycząca sposobu użycia projektu, wraz z przykładami kodu lub demonstracjami.) Przykładowe wykorzystanie programu:
-Uwaga! Wszystkie wyniki są zwtracane poprzez stworzenie pliku wynikowego, nie ma  możliwości na wyrzucenie wyników na konsolę      
-Oznaczenia: 
---xyz2plh (zamienia xyz na flh), należy podać współrzędne w kolejności x,y,z, w metrach, otrzymany wyniki to w kolejności phi, lambda, w stopniach jako liczba      dziesiętna i h w metrach       
+(Instrukcja dotycząca sposobu użycia projektu, wraz z przykładami kodu lub demonstracjami.) Przykładowe wykorzystanie programu:   
+Uwaga! Wszystkie wyniki są zwtracane poprzez stworzenie pliku wynikowego, nie ma  możliwości na wyrzucenie wyników na konsolę       
+Oznaczenia:   
+--xyz2plh (zamienia xyz na flh),    
+dla flagi -r należy podać współrzędne w kolejności x,y,z,   
+dla flagi -f należy podać plik z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu wartości jak dla flagi -r  
+wynikiem jest plik textowy Result_xyz2plh.txt z jednowierszowym nagłówkiem, kolejności phi, lambda, w stopniach      
+ jako liczba dziesiętna i h w metrach    
+współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'    
+   
+--plh2xyz (zamiena flh na xyz),   
+dla flagi -r należy podać współrzędne w kolejności f,l,w stopniach jako liczba dziesiętna a h w metrach   
+dla flagi -f należy podać plik z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r  
+wynikiem jest plik textowy Result_plh2xyz.txt z jednowierszowym nagłówkiem, kolejności x, y, z w metrach    
+współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'    
+    
+--xyz2neu (zamieniia xyz na NEU),    
+dla flagi -r należy podać współrzędne w kolejności x,y,z,x0,y0,z0   
+dla flagi -f należy podać plik z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r   
+przy czym, nie licząc pierszego wiersza po nagłówku można podać samo x,y,z, wtedy wartości NEU zostaną policzone   
+dla ostatnio podano x0,y0,z0    
+wynikiem jest plik textowy Result_xyz2neu.txt z jednowierszowym nagłówkiem, kolejności x, y, z w metrach  	   
+współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'   
+    
+--bl2xy1992 (zamiania bl na Ukł. 1992),   
+dla flagi -r należy podać współrzędne w kolejności B, L, w stopniach jako liczba dziesiętna  
+dla flagi -f należy podać plik z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r  
+wynikiem jest plik textowy Result_bl2xy1992.txt z jednowierszowym nagłówkiem, kolejności x,y w metrach w układzie 1992  
+współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'   
+   
   
---plh2xyz (zamiena flh na xyz) należy podać współrzędne w kolejności phi, lambda, w stopniach jako liczba dziesiętna i h w metrach otrzymany wyniki to w kolejności 
-        x,y,z, w metrach,    
-	  
---xyz2neu (zamieniia xyz na NEU) należy podać współrzędne w kolejności x,y,z,x0,y0,z0 program zwróci współrzędne w kolejności N,E,U     
-  
---bl2xy1992 (zamiania bl na Ukł. 1992) należy podać współrzędne w kolejności B, L, w stopniach jako liczba dziesiętna, metrach otrzymany wyniki to w kolejności x,y w metrach w układzie 1992      
-  
---bl2xy2000 (zamiania bl na Ukł. 2000) należy podać współrzędne w kolejności B, L, w stopniach jako liczba dziesiętna, metrach otrzymany wyniki to w kolejności x,y w metrach w układzie 2000     
+--bl2xy2000 (zamiania bl na Ukł. 2000),  
+dla flagi -r należy podać współrzędne w kolejności B, L, w stopniach jako liczba dziesiętna  
+dla flagi -f należy podać plik z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r  
+wynikiem jest plik textowy Result_bl2xy2000.txt z jednowierszowym nagłówkiem, kolejności x,y w metrach w układzie 2000  
+współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'   
+     
   
 Do obsługi pliku TRZEBA podać po fladze transformacji: -f (należy wówczas podać nazwę pliku) lub -r (trzeba wpisać dane dla 1 transformacji)       
 	-r (ręczne wpisywanie danych)    
