@@ -330,6 +330,13 @@ if __name__ == "__main__":
                     else: f.write(f'{coord}\n')            
 
     elif '--xyz2neu' in sys.argv:
+        if '-f' in sys.argv and '-r' in sys.argv:
+            for i,s in enumerate(sys.argv):
+                if s == '-r':
+                    x0 = sys.argv[i+1]
+                    y0 = sys.argv[i+2]
+                    z0 = sys.argv[i+3]
+            
         coords_neu=[]
         with open(f'{file_name}') as f:
             lines = f.readlines()
@@ -338,8 +345,8 @@ if __name__ == "__main__":
             for line in lines:
                 line = line.strip('\n')
                 xd = line.split(',')
-                if i == 1 and len(xd)!=6:
-                    raise NameError('Nie podano wspolrzędnych srodka')
+                # if i == 1 and len(xd)!=6:
+                    # raise NameError('Nie podano wspolrzędnych x0,y0,z0')
                 if len(xd)==6:
                     x_str,y_str,z_str,x0,y0,z0= line.split(',')
                 if len(xd)==3:

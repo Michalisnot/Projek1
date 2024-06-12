@@ -40,8 +40,16 @@ współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'
 --xyz2neu (zamieniia xyz na NEU),    
 dla flagi -r należy podać współrzędne w kolejności x,y,z,x0,y0,z0   
 dla flagi -f należy podać nazwę pliku textowego z 4 wierszowym nagłówkiem, w każdym kolejnym wierszu  wartości jak dla flagi -r   
-przy czym, nie licząc pierszego wiersza po nagłówku można podać samo x,y,z, wtedy wartości NEU zostaną policzone   
+przy czym, nie licząc pierszego wiersza po nagłówku, można podać samo x,y,z, wtedy wartości NEU zostaną policzone   
 dla ostatnio podano x0,y0,z0    
+Współrzędne x0,y0,z0 muszą być podane przynajmniej raz w ciągu jednego wywoałnia programu  
+albo za pomocą flagi -r albo po w tej samej linii co pierwsze współrzędne x,y,z w pliku:  
+[Nagłowek     
+Nagłowek   
+Nagłowek     
+Nagłowek]    
+XXXXX,YYYYY,ZZZZZ,X0000,Y0000,Z0000\n   
+XXXXX,YYYYY,ZZZZZ\n ...
 wynikiem jest plik textowy Result_xyz2neu.txt z jednowierszowym nagłówkiem, kolejności N,E,U w metrach  	   
 współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'   
     
