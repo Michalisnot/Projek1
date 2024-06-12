@@ -49,7 +49,7 @@ Nagłowek
 Nagłowek     
 Nagłowek]    
 XXXXX,YYYYY,ZZZZZ,X0000,Y0000,Z0000\n   
-XXXXX,YYYYY,ZZZZZ\n ...
+XXXXX,YYYYY,ZZZZZ\n ...    
 wynikiem jest plik textowy Result_xyz2neu.txt z jednowierszowym nagłówkiem, kolejności N,E,U w metrach  	   
 współrzędne poszczególnych punktów przedzielono znakiem końca linii '\n'   
     
